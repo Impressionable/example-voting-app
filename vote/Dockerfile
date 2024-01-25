@@ -12,7 +12,7 @@ RUN apt-get update \
 WORKDIR /app
 
 # Install our requirements.txt
-COPY requirements.txt /app/requirements.txt
+COPY $(pwd)/vote/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy our code from the current folder to /app inside the container
